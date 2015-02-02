@@ -21,3 +21,27 @@ RSpec.describe "A calc" do
   end
 end
 
+RSpec.describe Calc do
+  context "when normal mode" do
+    it "given 2 and 3 returns 5" do
+      calc = Calc.new
+      expect(calc.add(2, 3)).to eq(5)
+    end
+  end
+  context "when graph mode" do
+    it "draws graph" do
+    end
+  end
+end
+
+RSpec.describe Calc do
+  it {
+    calc = Calc.new
+    expect(calc.add(10, 5)).to eq(15)
+  }
+  it {
+    calc = Calc.new
+    expect(calc.add(10, 5)).not_to eq(19)
+  }
+  it "draws graph"
+end
